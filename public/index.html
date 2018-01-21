@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+
+.form {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+small,.color {
+    color: white;
+}
+</style>
+<script
+src="https://code.jquery.com/jquery-3.3.0.min.js"
+integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4="
+crossorigin="anonymous"></script>
+</head>
+<body class="col-12">
+    <nav class="navbar navbar-inverse color">
+            <h3>Quiz App <small>Multiplayer game</small></h3>
+      </nav>
+<br/>
+
+<br/>
+<div class="panel panel-default form">
+    <div class="panel-heading">Generate Questions</div>
+    <div class="panel-body">
+        <form action="/wiki" method="post">
+        <select name="occupation" id="occupation">
+            <option value="Q12299841">Cricketers</option>
+            <option value="Q10800557">Actors</option>
+            <option value="Q901">Scientist</option>
+            <option value="Q483501">Artists</option>
+          </select>
+          from
+          <select name="country" id="country">
+            <option value="Q668">India</option>
+            <option value="Q145">United Kingdom</option>
+            <option value="Q159">Russia</option>
+            <option value="Q30">Unites States</option>
+          </select>
+          <input type="submit" class="btn btn-default" id="submitDetails"  name="submitDetails" value="Submit" /><br>
+        </form>
+        </div>
+  </div>
+
+
+</div>
+<script>
+
+function getValues() {
+    var occupation = $('#occupation').val();
+    var country = $('#country').val();
+    console.log(occupation);
+    console.log(country);
+//     var endpointUrl = 'https://query.wikidata.org/sparql',
+//     sparqlQuery = "SELECT ?personLabel  WHERE {\n" +
+//         "  ?person wdt:P106 wd:"+occupation+" .\n" +
+//         "  ?person wdt:P19 ?placeOfBirth .\n" +
+//         "  ?placeOfBirth wdt:P17 wd:"+country+ " .\n" +
+//         "  SERVICE wikibase:label {\n" +
+//         "    bd:serviceParam wikibase:language \"en\"\n" +
+//         "  }\n" +
+//         "}",
+//     settings = {
+//         headers: { Accept: 'application/sparql-results+json' },
+//         data: { query: sparqlQuery }
+//     };
+
+// $.ajax( endpointUrl, settings ).then( function ( data ) {
+//     $( 'body' ).append( ( $('<pre>').text( JSON.stringify( data) ) ) );
+//     console.log( data );
+// } );
+}
+
+</script>
+</body>
+</html>
