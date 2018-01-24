@@ -4,7 +4,8 @@
   "description": "quiz application with auto generated questions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
   },
   "keywords": [
     "wikidata",
@@ -14,7 +15,11 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "encodeurl": "^1.0.2",
     "express": "^4.16.2",
-    "redis": "^2.8.0"
+    "mongoose": "^5.0.1",
+    "redis": "^2.8.0",
+    "superagent": "^3.8.2",
+    "superagent-no-cache": "^0.1.1"
   }
 }
